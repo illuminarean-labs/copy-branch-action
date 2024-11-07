@@ -1,0 +1,20 @@
+name: 'Copy Branch Action'
+description: 'Check if a branch exists, cross-repo'
+author: 'illuminarean labs'
+inputs:
+  repository:
+    description: 'Which repository to copy & paste in (format: owner/repo)'
+    required: true
+  source_branch:
+    description: 'Copy from branch'
+    required: true
+  destination_branch:
+    description: 'Paste to branch'
+    required: true
+  token:
+    description: 'Github personal access token'
+    required: true
+
+runs:
+  using: 'node20'
+  main: 'dist/index.js'
